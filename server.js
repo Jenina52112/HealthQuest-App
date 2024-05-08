@@ -1,6 +1,6 @@
 const express = require('express');
-const session = require('express-session');
-const cookieParser = require('cookie-parser');
+//const session = require('express-session');
+//const cookieParser = require('cookie-parser');
 const handlebars = require('express-handlebars');
 const sequelize = require('sequelize');
 require('dotenv').config();
@@ -10,16 +10,16 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false
-}));
+//app.use(cookieParser());
+// app.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: false
+// }));
 
 // Set up Handlebars as the template engine
-app.engine('handlebars', handlebars());
-app.set('view engine', 'handlebars');
+// app.engine('handlebars', handlebars());
+// app.set('view engine', 'handlebars');
 
 // Set up MySQL and Sequelize
 const { Sequelize, DataTypes } = sequelize;
