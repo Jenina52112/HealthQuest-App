@@ -1,28 +1,31 @@
 # Restful-API-Project
-* Use Node.js and Express.js to create a RESTful API.
 
-* Use Handlebars.js as the template engine.
+- Use Node.js and Express.js to create a RESTful API.
 
-* Use MySQL and the Sequelize ORM for the database.
+- Use Handlebars.js as the template engine.
 
-* Have both GET and POST routes for retrieving and adding new data.
+- Use MySQL and the Sequelize ORM for the database.
 
-* Use at least one new library, package, or technology that we haven’t discussed.
+- Have both GET and POST routes for retrieving and adding new data.
 
-* Have a folder structure that meets the MVC paradigm.
+- Use at least one new library, package, or technology that we haven’t discussed.
 
-* Include authentication (express-session and cookies).
+- Have a folder structure that meets the MVC paradigm.
 
-* Protect API keys and sensitive information with environment variables.
+- Include authentication (express-session and cookies).
 
-* Be deployed using Heroku (with data).
+- Protect API keys and sensitive information with environment variables.
 
-* Have a polished UI.
+- Be deployed using Heroku (with data).
 
-* Be responsive.
+- Have a polished UI.
 
-* Be interactive (i.e., accept and respond to user input).
+- Be responsive.
 
-* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+- Be interactive (i.e., accept and respond to user input).
 
-* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+- Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+
+- Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+
+check
