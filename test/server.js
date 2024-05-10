@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 const sess = {
-  secret: "MVC Tech Blog secret",
+  secret: process.env.SESSION_SECRET,
   cookie: {
     maxAge: 36000,
     httpOnly: true,
