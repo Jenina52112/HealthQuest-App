@@ -1,0 +1,19 @@
+{{! Homepage}}
+
+<div class="container">
+    <div class="row homepage-main">
+        {{#each ITEM as |ITEM| }}
+            <div class="row mb-4 project card text-dark shadow">
+                <div class="card-header">
+                    <h3>
+                        <a href="/ITEM_PAGE/{{ITEM.id}}">{{ITEM.title}}</a>
+                    </h3>
+                    <p>{{format_date ITEM.date_created}}</p>
+                </div>
+                <div class="card-body">
+                    <p>{{ITEM.description}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
