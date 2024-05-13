@@ -27,5 +27,3 @@
 - Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
 - Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-check
