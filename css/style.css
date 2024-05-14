@@ -12,6 +12,14 @@ body {
     min-width: 300px;
 }
 
+.relaxDiv {
+    background-color: #a499b3;
+    text-align: center;
+    padding: 10px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 nav {
     background-color: #5E747F;
     text-align: center;
