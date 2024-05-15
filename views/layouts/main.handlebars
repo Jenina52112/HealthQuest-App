@@ -4,28 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Data!</title>
+  <title>Health Quest</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-
-  <!--div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Home</a>
-      </h1>
-      <nav>
-        < Conditionally render login or logout links>
-        {{#if logged_in}}
-        <a href="/test">test</a> |
-        <button class="no-button" id="logout">logout</button>
+    <header>
+    <div class="health_header">
+        <nav class="health_nav">
+        <a class="health_menu" href="/">Home</a>
+        <a id="dashboard" class="health_menu" href="/dashboard">Dashboard</a>
+        {{#if logged_in}}        
+        <a id="logout" class="health_menu" href="#">Logout</a>
         {{else}}
-        <a href="/login">login</a>
+        <a id="login" class="health_menu" href="/login">Login</a>
         {{/if}}
-      </nav>
-    </header-->
+        
+        </nav>
+    </div>
+    <h1 class="health_title">Health Quest</h1>
+    </header>
+
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       
@@ -36,11 +35,10 @@
     </footer>
   </div>
 
-  <!-- Render script for logged in users only >
+  <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-  -->
+  
 </body>
-
 </html>

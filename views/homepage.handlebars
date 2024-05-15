@@ -24,3 +24,13 @@
 {{/each}}
 -->
 <p>This is a test</p>
+
+{{#each users as |user|}}
+  <div class="card">
+    <div class="card_header">
+      <h3>This is a test</h3>
+      <p>Posted by {{user.name}} </p>
+    </div>
+
+  </div>
+{{/each}}
