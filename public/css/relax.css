@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 0;
+    margin: 0%;
 }
 
 
@@ -48,6 +48,7 @@ footer{
     text-align: center;
     min-width: 100vw;
     height: 80px;
+
     margin-top: auto;
 }
 
@@ -71,8 +72,32 @@ footer{
   }
 
 .breathin{
+margin-top: 120px;
     background-color: #6191dd; /* Background color */
     width: 1050px;
 height: 100px;
 text-align: center;
+border-radius: 10px;
+padding-top: 30px;
+font-size: 50px;
+}
+
+#btnEl{
+    height: 100px;
+border-radius: 10px;
+font-size: 50px;
+width: 500px;
+}
+#timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1{
+    margin-bottom: 0%;
+    margin-top: 100px;
+    
 }
