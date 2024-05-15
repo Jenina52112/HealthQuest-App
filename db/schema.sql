@@ -1,6 +1,6 @@
 -- DROP DATABASE
-DROP DATABASE IF EXISTS healtquest_db;
+DROP DATABASE IF EXISTS healthquest_db;
 
 -- CREATE DATABASE
-CREATE DATABASE healtquest_db;
+CREATE DATABASE healthquest_db;
 
