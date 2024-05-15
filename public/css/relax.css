@@ -3,18 +3,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     min-height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
+
+
+
 .half-circle {
-    margin-top: 40px;
-    position: fixed;
+  margin-top: 40px;
+  position: fixed;
   top: 0; /* Position at the top of the viewport */
-margin-left: 40px;
+  margin-left: 40px;
   width: calc(100vw - 85px);
   height: 50vh; /* Half of the viewport height */
   border-bottom-left-radius: 50%; /* Use border-bottom-left-radius */
@@ -32,12 +35,24 @@ header{
     font-size: 50px;
 }
 
+#btnEl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ 
 footer{
     background-color: #534b62;
     text-align: center;
     min-width: 100vw;
     height: 80px;
+    margin-top: auto;
 }
+
+
+
 
 #secContainers {
     display: grid;
