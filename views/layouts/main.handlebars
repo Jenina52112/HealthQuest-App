@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Health Quest</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/relax.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
     <div class="health_header">
         <nav class="health_nav">
         <a class="health_menu" href="/">Home</a>
-        <a id="dashboard" class="health_menu" href="/dashboard">Dashboard</a>
+        
         {{#if logged_in}}        
         <a id="logout" class="health_menu" href="#">Logout</a>
         {{else}}
@@ -22,8 +22,12 @@
         
         </nav>
     </div>
-    <h1 class="health_title">Health Quest</h1>
+    <div class="half-circle"></div>
+
+    
+        <h1>RELAX</h1>
     </header>
+   
 
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
@@ -31,7 +35,9 @@
       {{{ body }}}
     </main>
     <footer>
-      
+      <footer>
+        <p>Team Four!</p>
+    </footer>
     </footer>
   </div>
 
