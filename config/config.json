@@ -1,8 +1,10 @@
 {
   "development": {
-    "dialect": "mysql",
-    "database": "journal_app_dev",
-    "host": "127.0.0.1"
+    "username": "root",
+    "password": "",
+    "database": "journal",
+    "host": "localhost",
+    "dialect": "mysql"
   },
   "test": {},
   "production": {}
