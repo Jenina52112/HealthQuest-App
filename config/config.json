@@ -1,10 +1,8 @@
 {
   "development": {
-    "username": "your_database_username",
-    "password": "your_database_password",
+    "dialect": "mysql",
     "database": "journal_app_dev",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "127.0.0.1"
   },
   "test": {},
   "production": {}
