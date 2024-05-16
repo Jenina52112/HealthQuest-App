@@ -12,10 +12,7 @@ RelaxDeepBreath.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    relax_deep_breath_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
