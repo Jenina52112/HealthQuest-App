@@ -3,12 +3,17 @@ const exphbs = require("express-handlebars");
 
 const app = express();
 
-// Create an instance of express-handlebars
-const hbs = exphbs.create({ defaultLayout: "main" });
+// Create an instance of express-handlebars with default settings
+const hbs = exphbs.create({
+  defaultLayout: "main",
+});
 
-// Configure Handlebars.js as the template engine
+// Set Handlebars.js as the template engine
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
+
+// Serve static files from the public directory
+app.use(express.static("public"));
 
 // Define routes
 app.get("/login", (req, res) => {

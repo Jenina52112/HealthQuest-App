@@ -1,25 +1,49 @@
-<form class="border p-4 rounded bg-light" method="post" action="/login">
-  <h2 class="mb-4">Login</h2>
-  <div class="form-group">
-    <label for="email">Email address</label>
-    <input
-      type="email"
-      class="form-control"
-      id="email"
-      name="email"
-      aria-describedby="emailHelp"
-      placeholder="Enter email"
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input
-      type="password"
-      class="form-control"
-      id="password"
-      name="password"
-      placeholder="Password"
-    />
-  </div>
-  <button type="submit" class="btn btn-primary">Login</button>
-</form>
+    <link rel="stylesheet" href="/styles/login.css" />
+  </head>
+  <body
+    style="background-image: url('/images/pexels-eberhardgross-2098427.jpg'); background-size: cover;"
+  >
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-6">
+          <div class="card shadow-lg rounded border-0">
+            <div class="card-body">
+              <h2 class="text-center mb-4">Health Quest</h2>
+              <form>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block"
+                >Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
