@@ -1,44 +1,51 @@
-const express = require('express');
-//const session = require('express-session');
-//const cookieParser = require('cookie-parser');
-const handlebars = require('express-handlebars');
-const sequelize = require('sequelize');
-require('dotenv').config();
+//import express package and the applications routes
+const path = require("path");
+const express = require("express");
+const session = require("express-session");
+const exphbs = require("express-handlebars");
+const routes = require("./controllers");
+const helpers = require("./utils/helpers");
+// import sequelize connection
+const sequelize = require("./config/connection");
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 
-// Middleware
+// Set up Handlebars.js engine with custom helpers
+const hbs = exphbs.create({ helpers });
+const sess = {
+  secret: process.env.SESSION_SECRET,
+  cookie: {
+    maxAge: 360000,
+    httpOnly: true,
+    secure: false,
+    sameSite: "strict",
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
+
+app.use(session(sess));
+
+// Inform Express.js on which template engine to use
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
+
+//middleware for parsing json and the html body
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-//app.use(cookieParser());
-// app.use(session({
-//     secret: process.env.SESSION_SECRET,
-//     resave: false,
-//     saveUninitialized: false
-// }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
-// Set up Handlebars as the template engine
-// app.engine('handlebars', handlebars());
-// app.set('view engine', 'handlebars');
+app.use(routes);
 
-// Set up MySQL and Sequelize
-const { Sequelize, DataTypes } = sequelize;
-const sequelizeInstance = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
-    host: process.env.DB_HOST,
-    dialect: 'mysql'
+// sync sequelize models to the database, then turn on the server
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}!`);
+  });
 });
-
-// Define Model
-const Data = sequelizeInstance.define('Data', {
-    // Define your model fields here
-});
-
-// Routes
-const dataRoutes = require('./routes/dataRoutes');
-app.use('/api/data', dataRoutes);
-
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+// set force to false
