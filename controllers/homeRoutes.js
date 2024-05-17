@@ -37,6 +37,11 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+//goto the add post view
+router.get("/addBreath", withAuth, (req, res) => {
+  res.render("addBreath", { logged_in: req.session.logged_in });
+});
+
 /*
 router.get("/", async (req, res) => {
   try {
