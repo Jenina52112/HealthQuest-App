@@ -1,6 +1,9 @@
 // import models
 const User = require("./user");
 const TestTable = require("./testTable");
+const RelaxDeepBreath = require("./Relax-deep-breath");
+const RelaxGuidedImagery = require("./RelaxGuidedImagery");
+const RelaxPRM = require("./Relax.PRM");
 
 User.hasMany(TestTable, {
   foreignKey: "user_id",
@@ -10,10 +13,39 @@ User.hasMany(TestTable, {
 TestTable.belongsTo(User, {
   foreignKey: "user_id",
 });
+
+User.hasMany(RelaxDeepBreath, {
+  foreignKey: "user_id",
+  onDelete: "cascade",
+});
+
+RelaxDeepBreath.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+User.hasMany(RelaxGuidedImagery, {
+})
+
+RelaxGuidedImagery.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+User.hasMany(RelaxPRM, {
+  foreignKey: "user_id",
+  onDelete: "cascade",
+});
+
+RelaxPRM.belongsTo(User, {
+})
+
 module.exports = {
   User,
   TestTable,
+  RelaxDeepBreath,
+  RelaxGuidedImagery,
+  RelaxPRM, 
 };
+
 
 /*
 // Products belongsTo Category
