@@ -1,6 +1,6 @@
 const seedRelaxDeepBreath = require("./relaxdeepbreath-seeds");
 const seedRelaxImagery = require("./relaximagery-seeds");
-const seedRelaxPRM = require("./relaxprm-seeds");
+const seedRelaxPRM = require("./relaxPRM-seeds");
 const sequelize = require("../config/connection");
 
 const seedAll = async () => {
