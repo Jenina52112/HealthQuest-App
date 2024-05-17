@@ -1,16 +1,29 @@
-<div id="secContainers">
-  <section id="breath">
-    <h3><a href="/breaths">Deep Breathing</a></h3>
-  </section>
+<div class="carousel slide mt-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="/breaths"><img class="d-block w-100" src="/images/carousel_breathe.jpg" alt="Breathe Neon Light in Foliage"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="./pmr.html"><img class="d-block w-100" src="/images/carousel_relax.jpeg" alt="Relax with Progressive Muscle Relaxation (PMR)">
+        {{!-- <div class="carousel-caption d-none d-md-block">
+    <h5>Progressive Muscle Relaxation</h5> --}}
+    </a>
+    </div>
+    <div class="carousel-item">
+      <a href="./imagery.html"><img class="d-block w-100" src="/images/carousel_imagine.jpg" alt="Guided Imagery"></a>
+    </div>
+  </div>
 
-  <section id="pmr">
-    <h3><a href="./pmr.html">Progressive Muscle Relaxation (PMR)</a></h3>
-  </section>
-
-  <section id="imagery">
-    <h3><a href="./imagery.html">Guided Imagery</a></h3>
-  </section>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
 </div>
+
 <!-- Loop over each object in the projects array >
 {{#each projects as |project| }}
 <div class="row mb-4 project">

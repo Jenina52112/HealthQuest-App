@@ -66,6 +66,7 @@ h1 {
   -10px -10px 25px var(--secondary_color),
   10px -10px 25px var(--secondary_color);
   border-bottom: 4px solid var(--link_color);
+  margin-bottom: 20px;
 }
 
 footer {
