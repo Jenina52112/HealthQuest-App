@@ -1,10 +1,10 @@
-<div class="carousel slide mt-5" data-bs-ride="carousel">
+<div class="carousel slide" id="hero_carousel_control" data-bs-ride="carousel">
 
   {{! Indicators }}
     <ol class="carousel-indicators">
-      <li data-target="#hero_carousel_control" data-slide-to="0" class="active"></li>
-      <li data-target="#hero_carousel_control" data-slide-to="1"></li>
-      <li data-target="#hero_carousel_control" data-slide-to="2"></li>
+      <li data-bs-target="#hero_carousel_control" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#hero_carousel_control" data-bs-slide-to="1"></li>
+      <li data-bs-target="#hero_carousel_control" data-bs-slide-to="2"></li>
     </ol>
 
   {{! Wrapper for Slides }}
@@ -25,11 +25,11 @@
 
 
 {{! Left and Right Controls }}
-  <a class="carousel-control-prev" href="#hero_carousel_control" role="button" data-slide="prev" onclick="$('#hero_carousel_control').carousel('prev')">
+  <a class="carousel-control-prev" href="#hero_carousel_control" role="button" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only"></span>
   </a>
-  <a class="carousel-control-next" href="#hero_carousel_control" role="button" data-slide="next" onclick="$('#hero_carousel_control').carousel('next')">
+  <a class="carousel-control-next" href="#hero_carousel_control" role="button" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only"></span>
   </a>

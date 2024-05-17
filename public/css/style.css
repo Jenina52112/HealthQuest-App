@@ -69,6 +69,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+.carousel {
+  margin-top: 150px;
+}
+
 .hero_carousel {
   margin-top: 10%;
   align-content: center;
