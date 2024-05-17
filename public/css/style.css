@@ -61,12 +61,27 @@ h1 {
   font-weight: 600;
   text-align: center;
   padding: 15px;
-  text-shadow: 10px 10px 25px var(--secondary_color),
-  -10px 10px 25px var(--secondary_color),
-  -10px -10px 25px var(--secondary_color),
-  10px -10px 25px var(--secondary_color);
+  text-shadow: 10px 10px 25px var(--background_color),
+  -10px 10px 25px var(--background_color),
+  -10px -10px 25px var(--background_color),
+  10px -10px 25px var(--background_color);
   border-bottom: 4px solid var(--link_color);
   margin-bottom: 20px;
+}
+
+.hero_carousel {
+  margin-top: 10%;
+  align-content: center;
+}
+
+.hero_carousel_img {
+  max-height: 400px;
+  width: auto;
+  opacity: 0.9;
+}
+
+.hero_carousel_img:hover {
+  opacity: 0.8;
 }
 
 footer {
