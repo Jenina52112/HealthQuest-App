@@ -8,7 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <script src="/app.js"></script>
-</body>
+<header>
+    <nav>
+        <div id="square"></div>
+        <div class="nav-container"></div>
+        <ul id="nav-links">
+            {{#each links}}
+                <li><a href="{{url}}">{{name}}</a></li>
+            {{/each}}
+        </ul>
+    </nav>
+</header>
+<footer>
+    <p>Team Four!</p>
+</footer>
 </html>

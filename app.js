@@ -34,6 +34,10 @@ app.get('/test', (req, res) => {
     res.send('Test route is working!');
 });
 
+app.use((err, req, res, next) => {
+    console.error(rr.stack);
+})
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
