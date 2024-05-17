@@ -16,7 +16,7 @@ body, ul {
 }
 
 body {
-    background-color: #D2D0BA;
+    background: linear-gradient(to bottom, #919286, #D2D0BA);
     font-family: 'Merienda', sans-serif;
     min-height: 100vh;
     display: flex;
