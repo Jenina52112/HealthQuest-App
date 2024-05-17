@@ -1,0 +1,109 @@
+/* Default styles */
+
+body {
+  background-color: #a499b3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0%;
+}
+
+.half-circle {
+  margin-top: 40px;
+  position: fixed;
+  top: 0; /* Position at the top of the viewport */
+  margin-left: 15px;
+  width: calc(100vw - 150px);
+  height: calc(100vh - 120px); /* Adjusted height */
+  border-bottom-left-radius: 50%; /* Use border-bottom-left-radius */
+  border-bottom-right-radius: 50%; /* Use border-bottom-right-radius */
+  z-index: -1; /* Move the half circle behind other content */
+  background-color: #d0bcd5; /* Background color of the half circle */
+}
+#mainP{
+  background-color: #A9FFCB;
+}
+header {
+  text-align: center;
+  padding: 10px 10px;
+  max-width: 800px;
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+#btnEl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border-radius: 10px;
+  font-size: 50px;
+  width: 500px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btnEl:hover {
+  background-color: blue; /* Change background color to blue on hover */
+  transform: scale(1.2); /* Make the button 20% bigger on hover */
+  color: white; /* Change text color to white for better contrast */
+}
+
+footer {
+  background-color: #534b62;
+  text-align: center;
+  min-width: 100vw;
+  height: 80px;
+  margin-top: auto;
+}
+
+#secContainers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with minimum width of 300px */
+  gap: 40px; /* Gap between columns */
+  width: 100%;
+  max-width: 1200px; /* Limit maximum width of the grid */
+  padding: 0 20px; /* Add padding to the grid */
+}
+
+section {
+  background-color: #6191dd; /* Background color */
+  padding: 15px; /* Padding for section content */
+  text-align: center;
+  color: #1b1725;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.breathin {
+  margin-top: 100px;
+  background-color: #6191dd; /* Background color */
+  width: 100%; /* Full width */
+  max-width: 1050px; /* Limit maximum width */
+  height: 100px;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 30px;
+  font-size: 50px;
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .breathin {
+    margin-top: 80px; /* Reduce margin top for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for even smaller screens */
+  .breathin {
+    margin-top: 60px; /* Further reduce margin top */
+    font-size: 40px; /* Decrease font size for smaller screens */
+  }
+}

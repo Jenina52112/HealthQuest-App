@@ -1,0 +1,18 @@
+<div class="new_breath">
+  <button type="submit" class="btn btn_new">New Deep Breathing</button>
+</div>
+
+{{#each breaths as |breath|}}
+  <div class="card">
+    <div class="card_header">
+      <h3>{{breath.relax_deep_breath_name}}</h3>
+      <p>User: {{breath.user.name}}</p>
+    </div>
+    <div class="card_body">
+
+      <p>{{breath.relax_deep_breath_description}}</p>
+    </div>
+  </div>
+{{/each}}
+
+<script src="/js/breath.js"></script>
