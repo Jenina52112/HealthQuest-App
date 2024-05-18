@@ -1,16 +1,40 @@
-<div id="secContainers">
-  <section id="breath">
-    <h3><a href="/breaths">Deep Breathing</a></h3>
-  </section>
+<div class="carousel slide" id="hero_carousel_control" data-bs-ride="carousel">
 
-  <section id="pmr">
-    <h3><a href="./pmr.html">Progressive Muscle Relaxation (PMR)</a></h3>
-  </section>
+  {{! Indicators }}
+    <ol class="carousel-indicators">
+      <li data-bs-target="#hero_carousel_control" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#hero_carousel_control" data-bs-slide-to="1"></li>
+      <li data-bs-target="#hero_carousel_control" data-bs-slide-to="2"></li>
+    </ol>
 
-  <section id="imagery">
-    <h3><a href="./imagery.html">Guided Imagery</a></h3>
-  </section>
+  {{! Wrapper for Slides }}
+  <div class="carousel-inner hero_carousel">
+    <div class="carousel-item active">
+      <a href="/breaths"><img class="d-block rounded mx-auto hero_carousel_img" src="/images/carousel_breathe.jpeg" alt="Breathe Neon Light in Foliage"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="./pmr.html"><img class="d-block rounded mx-auto hero_carousel_img" src="/images/carousel_relax.jpeg" alt="Relax with Progressive Muscle Relaxation (PMR)">
+        {{!-- <div class="carousel-caption d-none d-md-block">
+    <h5>Progressive Muscle Relaxation</h5> --}}
+    </a>
+    </div>
+    <div class="carousel-item">
+      <a href="./imagery.html"><img class="d-block rounded mx-auto hero_carousel_img" src="/images/carousel_imagine.jpeg" alt="Guided Imagery"></a>
+    </div>
+  </div>
+
+
+{{! Left and Right Controls }}
+  <a class="carousel-control-prev" href="#hero_carousel_control" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
+  <a class="carousel-control-next" href="#hero_carousel_control" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
 </div>
+
 <!-- Loop over each object in the projects array >
 {{#each projects as |project| }}
 <div class="row mb-4 project">
