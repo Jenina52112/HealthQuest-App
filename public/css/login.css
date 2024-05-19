@@ -1,0 +1,83 @@
+:root {
+    --background: #c9e2c9a9;
+    --light: #ffffff;
+    --light-grey: #b7aeb7;
+    --dark: #000000;
+    --border-radius: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 0 20px;
+    border: 2px solid var(--dark);
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: 6px 5px var(--light-grey);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.form_input {
+    font-size: 20px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card_header {
+    color: var(--light-grey);
+    background-color: var(--dark);
+    padding: 10px;
+    margin: 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.card_body {
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    color: var(--light);
+    background-color: var(--light-grey);
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7B9E87;
+}
+
+.signup, .login {
+    margin-top: 15px;
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 1rem;
+}
