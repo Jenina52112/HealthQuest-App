@@ -19,28 +19,13 @@ RelaxGuidedImagery.init(
         key: "id",
       },
     },
-    image_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      /*
-            references: {
-                model: 'image',
-                
-        },
-            key: 'id',
-            onDelete: 'CASCADE',
-            onUpdate: 'CASCADE',
-            */
-    },
-    created_at: {
-      type: DataTypes.DATE,
+    relax_guided_imagery_name: {
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
-    updated_at: {
-      type: DataTypes.DATE,
+    relax_guided_imagery_description: {
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
   },
   {

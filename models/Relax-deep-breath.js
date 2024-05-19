@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class RelaxDeepBreath extends Model {}
+class RelaxDeepBreathTable extends Model {}
 
 // create fields/columns for Relax model
-RelaxDeepBreath.init(
+RelaxDeepBreathTable.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -28,10 +28,6 @@ RelaxDeepBreath.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    relax_deep_breath_duration: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
   },
   {
     sequelize,
@@ -41,4 +37,4 @@ RelaxDeepBreath.init(
   }
 );
 
-module.exports = RelaxDeepBreath;
+module.exports = RelaxDeepBreathTable;
