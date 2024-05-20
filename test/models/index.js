@@ -50,6 +50,7 @@ const TestTable = sequelize.define('TestTable', {
 
 User.hasMany(TestTable, {
     foreignKey: 'user_id',
+  onDelete: "cascade",
 });
 
 TestTable.belongsTo(User, {

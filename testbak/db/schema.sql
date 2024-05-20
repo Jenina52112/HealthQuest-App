@@ -1,0 +1,6 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS healtquest_db;
+
+-- CREATE DATABASE
+CREATE DATABASE healtquest_db;
+
