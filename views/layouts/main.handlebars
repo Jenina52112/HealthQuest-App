@@ -4,47 +4,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {{! Google Fonts}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+  {{! Bootstrap}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+  
+  {{! CSS Styles }}
+  <link rel="stylesheet" href="css/style.css">
+
   <title>Health Quest</title>
   <link rel="stylesheet" href="/css/relax.css">
+
 </head>
 
 <body>
-    <header>
-    <div class="health_header">
+    <header class="health_header">
         <nav class="health_nav">
-        <a class="health_menu" href="/">Home</a>
-        
-        {{#if logged_in}}        
-        <a id="logout" class="health_menu" href="#">Logout</a>
-        {{else}}
-        <a id="login" class="health_menu" href="/login">Login</a>
-        {{/if}}
-        
+          {{#if logged_in}}
+          <a class="health_menu" href="/">Home</a>
+          <a id="logout" class="health_menu" href="#">Logout</a>
+          {{else}}
+          <a class="health_menu" href="/">Home</a>
+          <a id="login" class="health_menu" href="/login">Login</a>
+          {{/if}}
         </nav>
-    </div>
-    <div class="half-circle"></div>
-
-    
-        <h1>RELAX</h1>
     </header>
-   
 
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      
-      {{{ body }}}
-    </main>
-    <footer>
-      <footer>
-        <p>Team Four!</p>
-    </footer>
-    </footer>
-  </div>
+    <div class="half-circle mb-3">
+        <h1 class="page_title text-center">Health Quest</h1>
+    </div>
+
+  <main class="container container-fluid mt-5">
+    <!-- Render the sub layout -->
+    {{{ body }}}
+  </main>
+
+<footer>
+    <p class="my-3">Team Four!</p>
+</footer>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
   
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
