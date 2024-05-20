@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, TestTable } = require("../models");
+const { User, RelaxDeepBreathTable } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -12,6 +12,37 @@ router.get("/", async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render("homepage", { users, logged_in: req.session.logged_in });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/inprogress", withAuth, async (req, res) => {
+  try {
+    // Pass session flag into template
+    res.render("inProgress", { logged_in: req.session.logged_in });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/breath/:id", withAuth, async (req, res) => {
+  console.log("here");
+  try {
+    const breathData = await RelaxDeepBreathTable.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+        },
+      ],
+    });
+
+    const breath = breathData.get({ plain: true });
+
+    res.render("breath", {
+      ...breath,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
