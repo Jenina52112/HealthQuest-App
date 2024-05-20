@@ -11,7 +11,8 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
   margin: 0%;
 }
@@ -28,8 +29,8 @@ body {
   z-index: -1; /* Move the half circle behind other content */
   background-color: #d0bcd5; /* Background color of the half circle */
 }
-#mainP{
-  background-color: #A9FFCB;
+#mainP {
+  background-color: #a9ffcb;
 }
 header {
   text-align: center;
@@ -68,7 +69,10 @@ footer {
 
 #secContainers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with minimum width of 300px */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid with minimum width of 300px */
   gap: 40px; /* Gap between columns */
   width: 100%;
   max-width: 1200px; /* Limit maximum width of the grid */

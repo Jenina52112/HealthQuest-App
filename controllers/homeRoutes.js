@@ -1,9 +1,5 @@
 const router = require("express").Router();
-
 const { User, RelaxDeepBreathTable, Benefit } = require("../models");
-
-// const { Benefit } = require("../models");
-
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -16,6 +12,39 @@ router.get("/", async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render("homepage", { users, logged_in: req.session.logged_in });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//unfinished business
+
+router.get("/inprogress", withAuth, async (req, res) => {
+  try {
+    // Pass session flag into template
+    res.render("inProgress", { logged_in: req.session.logged_in });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/breath/:id", withAuth, async (req, res) => {
+  console.log("here");
+  try {
+    const breathData = await RelaxDeepBreathTable.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+        },
+      ],
+    });
+
+    const breath = breathData.get({ plain: true });
+
+    res.render("breath", {
+      ...breath,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -68,41 +97,14 @@ router.get("/addBreath", withAuth, (req, res) => {
   res.render("addBreath", { logged_in: req.session.logged_in });
 });
 
-
-router.get('/benefits', async (req, res) => {
+router.get("/benefits", async (req, res) => {
   try {
     const benefitData = await Benefit.findAll();
     const benefits = benefitData.map((benefit) => benefit.get({ plain: true }));
-    res.render('benefits', { benefits, loggedIn: req.session.loggedIn });
+    res.render("benefits", { benefits, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-/*
-router.get("/", async (req, res) => {
-  try {
-
-    // Get all projects and JOIN with user data
-    const testData = await TestTable.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const tests = testData.map((test) => test.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render("homepage", {
-      //logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-*/
 
 module.exports = router;

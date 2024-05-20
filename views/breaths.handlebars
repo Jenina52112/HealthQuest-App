@@ -1,14 +1,9 @@
-<section class="navs">
-  <div class="new_breath">
-    <button type="submit" class="btn btn_new">New Deep Breathing Benefit</button>
-  </div>
-  <div class="breath-benefit">
-    <a href="/benefits"><button type="submit" class="btn btn_new">Deep Breathing Benefits</button></a>
-  </div>
-</section>
+<div class="new_breath">
+  <button type="submit" class="btn btn_new">New Deep Breathing</button>
+</div>
 
 {{#each breaths as |breath|}}
-  <div class="card" id="cardid">
+  <div class="card">
     <div class="card_header">
       <h3><a
           href="/breath/{{breath.id}}"
@@ -18,7 +13,6 @@
     <div class="card_body">
 
       <p>{{breath.relax_deep_breath_description}}</p>
-      
     </div>
   </div>
 {{/each}}
