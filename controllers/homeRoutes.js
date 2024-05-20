@@ -1,10 +1,5 @@
 const router = require("express").Router();
 const { User, RelaxDeepBreathTable } = require("../models");
-
-const { User, RelaxDeepBreathTable } = require("../models");
-
-/*const { User, Benefit } = require("../models");*/
-
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -21,6 +16,8 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//unfinished business
 
 router.get("/inprogress", withAuth, async (req, res) => {
   try {
@@ -100,18 +97,7 @@ router.get("/addBreath", withAuth, (req, res) => {
   res.render("addBreath", { logged_in: req.session.logged_in });
 });
 
-
-router.get('/benefits', async (req, res) => {
-  try {
-    const benefitData = await Benefit.findAll();
-    const benefits = benefitData.map((benefit) => benefit.get({ plain: true }));
-    res.render('benefits', { benefits, loggedIn: req.session.loggedIn });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-/*
-router.get("/", async (req, res) => {
+router.get("/benefits", async (req, res) => {
   try {
     const benefitData = await Benefit.findAll();
     const benefits = benefitData.map((benefit) => benefit.get({ plain: true }));
