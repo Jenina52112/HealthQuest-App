@@ -33,7 +33,6 @@ const userBenefitsdata = [
       "Deep breathing serves as a mindfulness practice, allowing you to focus on the present moment and detach from stressful thoughts and worries. This can help reduce symptoms of anxiety and depression.",
   },
   {
-    id: 6,
     user_id: 1,
     relax_deep_breath_name: "Improved Respiratory Function",
     relax_deep_breath_description:

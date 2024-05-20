@@ -28,6 +28,10 @@ RelaxDeepBreathTable.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    relax_deep_breath_duration: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
   },
   {
     sequelize,
