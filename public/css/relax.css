@@ -100,6 +100,106 @@ section {
   font-size: 50px;
 }
 
+/* Default styles */
+:root {
+  --background_color: #a499b3;
+  --secondary_color: #d0bcd5;
+  --teriary_color: #745c9782;
+  --text_color: rgb(177, 80, 11);
+  --link_color: rgb(211, 166, 43);
+  --card_background: rgb(232, 224, 219);
+}
+
+a {
+  color: var(--text_color);
+  text-decoration: none;
+  padding: 3px;
+}
+
+a:hover {
+  color: var(--link_color);
+}
+
+body {
+  color: var(--text_color);
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  background-color: var(--background_color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0%;
+}
+
+.half-circle {
+  margin-top: 40px;
+  position: fixed;
+  top: 0; /* Position at the top of the viewport */
+  margin-left: 15px;
+  width: calc(100vw - 150px);
+  height: calc(100vh - 120px); /* Adjusted height */
+  border-bottom-left-radius: 50%; /* Use border-bottom-left-radius */
+  border-bottom-right-radius: 50%; /* Use border-bottom-right-radius */
+  z-index: -1; /* Move the half circle behind other content */
+  background-color: #d0bcd5; /* Background color of the half circle */
+}
+
+.health_nav {
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  font-size: 15px;
+}
+
+h1 {
+  font-size: xxx-large;
+  font-weight: 600;
+  padding: 15px;
+  text-shadow: 10px 10px 25px var(--background_color),
+  -10px 10px 25px var(--background_color),
+  -10px -10px 25px var(--background_color),
+  10px -10px 25px var(--background_color);
+  border-bottom: 4px solid var(--link_color);
+  margin-bottom: 20px;
+}
+
+.carousel {
+  margin-top: 150px;
+}
+
+.hero_carousel {
+  margin-top: 10%;
+  align-content: center;
+}
+
+.hero_carousel_img {
+  max-height: 400px;
+  width: auto;
+  opacity: 0.8;
+}
+
+.hero_carousel_img:hover {
+  opacity: 0.9;
+}
+
+footer {
+  background-color: var(--teriary_color);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.account_forms {
+  margin-top: 10%;
+}
+
 /* Media queries for responsiveness */
 
 @media only screen and (max-width: 768px) {
