@@ -2,7 +2,7 @@ const { RelaxDeepBreathTable } = require("../models");
 
 const userBenefitsdata = [
   {
-    id: 1,
+
     user_id: 1,
 
     relax_deep_breath_name: "Reduced Stress and Anxiety",
@@ -10,7 +10,6 @@ const userBenefitsdata = [
       "Deep breathing triggers the relaxation response in the body, reducing levels of stress hormones such as cortisol and promoting feelings of calmness and relaxation.",
   },
   {
-    id: 2,
     user_id: 1,
 
     relax_deep_breath_name: "Lowered Blood Pressure",
@@ -18,7 +17,6 @@ const userBenefitsdata = [
       "By activating the bodys relaxation response, deep breathing can help lower blood pressure and promote cardiovascular health.",
   },
   {
-    id: 3,
     user_id: 1,
 
     relax_deep_breath_name: "Improved Oxygenation",
@@ -26,7 +24,6 @@ const userBenefitsdata = [
       " Deep breathing allows you to take in more oxygen, which is essential for optimal functioning of the body and brain. This can enhance energy levels and cognitive function.",
   },
   {
-    id: 4,
     user_id: 1,
 
     relax_deep_breath_name: "Enhanced Relaxation",
@@ -34,7 +31,6 @@ const userBenefitsdata = [
       "Deep breathing can help you relax and unwind, making it a great way to de-stress and improve overall well-being.",
   },
   {
-    id: 5,
     user_id: 1,
 
     relax_deep_breath_name: "Stress Reduction",
@@ -43,7 +39,6 @@ const userBenefitsdata = [
   },
   {
     user_id: 1,
-    id: 6,
     relax_deep_breath_name: "Improved Respiratory Function",
     relax_deep_breath_description:
       "Practicing deep breathing regularly can strengthen the diaphragm and improve lung capacity, leading to more efficient breathing patterns and better respiratory health.",
