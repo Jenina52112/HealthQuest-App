@@ -2,7 +2,7 @@ const { RelaxPRM } = require('../models');
 
 const relaxPRMSeeds = [
     {
-        benefits_id: 1,
+        id: 1,
         title: 'Reduction in Muscle Tension',
         description:'PMR involves systematically tensing and then relaxing different muscle groups in the body. This process helps release physical tension stored in muscles, promoting a sense of relaxation and ease.',
     },

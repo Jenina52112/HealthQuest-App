@@ -14,7 +14,6 @@ const addBreathFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      alert("here");
       document.location.replace("/");
     } else {
       alert("Failed to create project");
