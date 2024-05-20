@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bootstrap": "^5.3.3",
+    "connect-session-sequelize": "^7.0.4",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "handlebars": "^4.7.8",
+    "mysql2": "^3.9.7",
+    "sequelize": "^6.37.3"
+  },
+  "name": "restful-api-project",
+  "version": "1.0.0",
+  "description": "* Use Node.js and Express.js to create a RESTful API.",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch server.js",
+    "seed": "node seeds/benefitSeeds.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
