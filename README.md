@@ -27,9 +27,13 @@ Future development of this app would include expansion of the personal account, 
 
 ## Usage
 Upon opening the [Health Quest](), the user is presented with a carousel of images that link to the different areas of the app where they may learn about good health practices.
-Clicking the "Login" button allows new users to create a new account and existing users to login.
 
 <p align="center"><img src="./assets/images/health_quest_homepage.png" alt="Health Quest Homepage"></p>
+
+Clicking the "Login" button allows new users to create a new account and existing users to login.
+
+<p align="center"><img src="./assets/images/health_quest_login.png" alt="Health Quest Login"></p>
+
 
 ## Requirements
 
