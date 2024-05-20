@@ -4,37 +4,81 @@
     --light-grey: #b7aeb7;
     --dark: #000000;
     --border-radius: 0.5rem;
+    --pastel-blue: #a8d5e2;
+    --pastel-green: #a8e2a8;
 }
 
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: var(--background);
+    background-color: #3EECAC;
+    background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
     margin: 0;
     padding: 0;
-    font-family: "Arial", sans-serif;
-    color: var(--dark);
-    line-height: 1.5;
-    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 20px 0 20px;
-    border: 2px solid var(--dark);
-    background-color: var(--light);
-    border-radius: var(--border-radius);
+    position: relative;
+    width: 500px;
+    height: 650px;
+    overflow: hidden;
+    background-image: linear-gradient(to top, rgb(255,255,255) 0%, rgba(255,255,255,1) 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
     box-shadow: 6px 5px var(--light-grey);
     padding: 20px;
-    width: 300px;
     text-align: center;
+    z-index: 1;
+}
+
+.wave {
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    z-index: 0;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: wave 5s infinite ease-in-out, colorChange 20s infinite linear;
+    border-radius: 40%;
+    background: var(--pastel-blue);
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translate(-50%, -50%) translateY(-10px) rotate(10deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translate(-50%, -50%) translateY(10px) rotate(-10deg);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background: var(--pastel-blue);
+    }
+    50% {
+        background: var(--pastel-green);
+    }
+    100% {
+        background: var(--pastel-blue);
+    }
 }
 
 .form_input {
@@ -44,6 +88,8 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
 }
 
 .card_header {
@@ -52,12 +98,16 @@ body {
     padding: 10px;
     margin: 0;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
+    position: relative;
+    z-index: 1;
 }
 
 .card_body {
     padding: 1%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
 }
 
 .btn {
@@ -69,6 +119,8 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .btn:hover {
@@ -80,4 +132,6 @@ body {
     color: var(--dark);
     text-decoration: none;
     font-size: 1rem;
+    position: relative;
+    z-index: 1;
 }
