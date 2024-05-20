@@ -97,6 +97,10 @@ footer {
   text-align: center;
 }
 
+
+.card{
+  margin-top: 20%;
+}
 /* :root {
   --background: #c9e2c9a9;
   --light: #ffffff;
