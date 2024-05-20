@@ -7,12 +7,12 @@ const seedAll = async () => {
   await sequelize.sync({ force: false });
   console.log("\n----- DATABASE SYNCED -----\n");
   await seedRelaxDeepBreath();
-  await sequelize.sync({ force: false });
-  console.log("\n----- DATABASE SYNCED -----\n");
-  await seedRelaxImagery();
-  await sequelize.sync({ force: false });
-  console.log("\n----- DATABASE SYNCED -----\n");
-  await seedRelaxPRM();
+  // await sequelize.sync({ force: false });
+  // console.log("\n----- DATABASE SYNCED -----\n");
+  // await seedRelaxImagery();
+  // await sequelize.sync({ force: false });
+  // console.log("\n----- DATABASE SYNCED -----\n");
+  // await seedRelaxPRM();
 };
 
 seedAll();

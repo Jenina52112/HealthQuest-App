@@ -10,7 +10,6 @@ router.get("/", withAuth, async (req, res) => {
         "user_id",
         "relax_deep_breath_name",
         "relax_deep_breath_description",
-        "relax_deep_breath_duration",
       ],
       include: [
         {

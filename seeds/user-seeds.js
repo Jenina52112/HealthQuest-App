@@ -11,9 +11,6 @@ const userSeeds = [
     email: "user2@gmail.com",
     password: "password2",
   },
-  {
-  },
-
   // Add more user objects as needed
 
 ]
