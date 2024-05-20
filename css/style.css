@@ -2,7 +2,9 @@ body, ul {
     margin: 0;
     padding: 0;
 }
-
+h3 .card_header{
+    color: pink;
+}
 body {
     background-color: #D2D0BA;
     display: flex;
@@ -12,6 +14,9 @@ body {
     min-width: 300px;
 }
 
+/* .benefitsContainer {
+    margin-top: 95px;
+} */
 nav {
     background-color: #5E747F;
     text-align: center;
@@ -50,6 +55,7 @@ footer {
     max-width: 800px;
     margin: 0 auto;
 }
+
 
 @media (max-width: 600px) {
     nav ul li {
