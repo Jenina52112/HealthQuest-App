@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
+//use bcrypt for encryption and decryption
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
@@ -29,6 +30,7 @@ User.init(
       },
     },
   },
+  //encrypt/decrypt   the password with a hash hooks
   {
     hooks: {
       beforeCreate: async (newUserData) => {

@@ -1,3 +1,4 @@
+//navigate to the add breath form to add a new entry
 async function createBreathForm(event) {
   event.preventDefault();
 

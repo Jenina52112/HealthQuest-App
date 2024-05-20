@@ -1,8 +1,8 @@
+//bulk insert the seed data for MySQL
 const { RelaxDeepBreathTable } = require("../models");
 
 const userBenefitsdata = [
   {
-
     user_id: 1,
     relax_deep_breath_name: "Reduced Stress and Anxiety",
     relax_deep_breath_description:

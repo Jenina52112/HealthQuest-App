@@ -6,6 +6,7 @@ class RelaxDeepBreathTable extends Model {}
 // create fields/columns for Relax model
 RelaxDeepBreathTable.init(
   {
+    //create the primary key with an auto increment
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -13,6 +14,7 @@ RelaxDeepBreathTable.init(
       autoIncrement: true,
     },
 
+    //foreign key to the user table
     user_id: {
       type: DataTypes.INTEGER,
       references: {

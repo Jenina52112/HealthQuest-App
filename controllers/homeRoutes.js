@@ -97,6 +97,7 @@ router.get("/addBreath", withAuth, (req, res) => {
   res.render("addBreath", { logged_in: req.session.logged_in });
 });
 
+//get all the benefits
 router.get("/benefits", async (req, res) => {
   try {
     const benefitData = await Benefit.findAll();
