@@ -1,20 +1,51 @@
-<div class="card">
-  <h3 class="card_header">Login</h3>
-  <form id="login-form" class="card_body login-form">
-    <label class="form_label" for="user-login">Username</label>
-    <input id="user-login" type="text" autofocus="true" class="form_input" />
+{{! Login and Create New Account Form }}
 
-    <label class="form_label" for="password-login">Password</label>
-    <input
-      id="password-login"
-      type="password"
-      autofocus="true"
-      class="form_input"
-    />
+<div class="container">
+    <div class="row account_forms">
 
-    <button type="submit" class="btn">Login!</button>
-    <a class="signup" href="/signup">Sign up instead</a>
-  </form>
+        {{! Login Form }}
+        <div class="col-md-6">
+            <h2 class="text-center form_header">Login</h2>
+                <form class="form login_form">
+                    {{! Email Field }}
+                    <div class="form-group mb-2">
+                        <input class="form-control" type="text" id="email_login" placeholder="Email"/>
+                    </div>
+                    {{! Password Field }}
+                    <div class="form-group mb-2">
+                        <input class="form-control" type="text" id="password_login" placeholder="Password"/>
+                    </div>
+                    {{! Login Button }}
+                    <div class="form-group">
+                        <button class="btn btn-secondary">Login</button>
+                    </div>
+                </form>
+        </div>
+
+        {{! Create New Account Form }}
+        <div class="col-md-6">
+            <h2 class="text-center form_header">Create an Account</h2>
+                <form class="form signup_form">
+                    <div class="form-group mb-2 create_account_box">
+                        <input clas="form-control" type="text" id="new_account_name" placeholder="Enter Your Name"/>
+                    </div>
+                    {{! Email Field }}
+                    <div class="form-group mb-2 create_account_box">
+                        <input clas="form-control" type="text" id="new_account_email" placeholder="Enter Your Email"/>
+                    </div>
+                    {{! Password Field }}
+                    <div class="form-group mb-2 create_account_box">
+                        <input clas="form-control" type="text" id="new_account_password" placeholder="Enter A Password"/>
+                    </div>
+                    {{! Submit Button }}
+                    <div class="form-group create_account_box">
+                        <button class="btn btn-secondary" type="submit">Create Account</button>
+                    </div>
+                </form>
+        </div>
+
+    </div>
 </div>
 
 <script src="./js/login.js"></script>
+<script src="./js/signup.js"></script>
