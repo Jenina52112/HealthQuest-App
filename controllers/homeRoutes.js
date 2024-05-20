@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, RelaxDeepBreathTable } = require("../models");
+const { User, RelaxDeepBreathTable, Benefit } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
