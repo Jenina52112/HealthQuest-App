@@ -1,5 +1,5 @@
 const seedRelaxDeepBreath = require("./relaxdeepbreath-seeds");
-const seedRelaxDeepBreath = require("./relaxdeepbreath-seeds");
+
 const sequelize = require("../config/connection");
 
 const seedAll = async () => {
