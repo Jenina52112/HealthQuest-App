@@ -134,8 +134,32 @@ footer {
   background-color: var(--tertiary_color); /* Changes the background color on hover */
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.226);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
 .card {
   margin-top: 20%;
+  overflow: auto;
+}
+
+.breath_card_container {
+  max-height: 575px;
+  max-width: 700px;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breath_card {
+  margin-top: 2%;
 }
 
 #cardid {

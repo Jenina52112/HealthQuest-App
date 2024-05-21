@@ -7,19 +7,20 @@
   </div>
 </section>
 
+<div class="breath_card_container">
 {{#each breaths as |breath|}}
-  <div class="card">
+  <div class="card breath_card">
     <div class="card_header">
-      <h3><a
+      <h3 class="m-1 pt-1"><a
           href="/breath/{{breath.id}}"
         >{{breath.relax_deep_breath_name}}</a></h3>
-      <p>User: {{breath.user.name}}</p>
+      <p class="m-1">User: {{breath.user.name}}</p>
     </div>
-    <div class="card_body">
-
+    <div class="m-1 card_body">
       <p>{{breath.relax_deep_breath_description}}</p>
     </div>
   </div>
 {{/each}}
+</div>
 
 <script src="/js/breath.js"></script>
