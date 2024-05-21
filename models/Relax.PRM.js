@@ -19,15 +19,16 @@ RelaxPRM.init(
         key: "id",
       },
     },
-  relax_PRM_name : {
-    type: DataTypes.STRING,
-    allowNull: false,
+    relax_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      /*references: {
+                model: 'relax',
+                key: 'id'
+            }  
+            */
+    },
   },
-  relax_PRM_description: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-},
   {
     sequelize,
     timestamps: false,

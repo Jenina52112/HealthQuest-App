@@ -1,0 +1,16 @@
+<section class="navs">
+  <div class="new_breath">
+    <button type="submit" class="btn btn_new">New Deep Breathing Benefit</button>
+  </div>
+  <div class="breath-benefit">
+    <a href="/benefits"><button type="submit" class="btn btn_new">Deep Breathing Benefits</button></a>
+  </div>
+</section>
+
+<div>{{#each benefits}}
+    <h3>{{name}}</h3>
+    <p>{{description}}</p>
+    {{/each}}
+</div>
+
+<script src="/js/breath.js"></script>

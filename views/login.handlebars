@@ -1,76 +1,112 @@
+<script>
+  // Dynamically add the stylesheet link const link =
+  document.createElement('link'); link.rel = 'stylesheet'; link.href =
+  '/css/login.css'; document.head.appendChild(link);
+</script>
+
 {{! Login and Create New Account Form }}
 
 <div class="container">
   <div class="row account_forms">
+    <div class="row account_forms">
 
-    {{! Login Form }}
-    <div class="col-md-6">
-      <h2 class="text-center form_header">Login</h2>
-      <form class="form login_form">
-        {{! Email Field }}
-        <div class="form-group mb-2">
-          <input
-            class="form-control"
-            type="text"
-            id="email_login"
-            placeholder="Email"
-          />
-        </div>
-        {{! Password Field }}
-        <div class="form-group mb-2">
-          <input
-            class="form-control"
-            type="text"
-            id="password_login"
-            placeholder="Password"
-          />
-        </div>
-        {{! Login Button }}
-        <div class="form-group">
-          <button class="btn btn-secondary">Login</button>
-        </div>
-      </form>
+      {{! Login Form }}
+      <div class="col-md-6">
+        <h2 class="text-center form_header">Login</h2>
+        <form class="form login_form">
+          {{! Email Field }}
+          <div class="form-group mb-2">
+            <input
+              class="form-control"
+              type="text"
+              id="email_login"
+              placeholder="Email"
+            />
+          </div>
+          {{! Password Field }}
+          <div class="form-group mb-2">
+            <input
+              class="form-control"
+              type="text"
+              id="password_login"
+              placeholder="Password"
+            />
+          </div>
+          {{! Login Button }}
+          <div class="form-group">
+            <button class="btn btn-secondary">Login</button>
+          </div>
+        </form>
+      </div>
+      {{! Login Form }}
+      <div class="col-md-6">
+        <h2 class="text-center form_header">Login</h2>
+        <form class="form login_form">
+          {{! Email Field }}
+          <div class="form-group mb-2">
+            <input
+              class="form-control"
+              type="text"
+              id="email_login"
+              placeholder="Email"
+            />
+          </div>
+          {{! Password Field }}
+          <div class="form-group mb-2">
+            <input
+              class="form-control"
+              type="text"
+              id="password_login"
+              placeholder="Password"
+            />
+          </div>
+          {{! Login Button }}
+          <div class="form-group">
+            <button class="btn btn-secondary">Login</button>
+          </div>
+        </form>
+      </div>
+
+      {{! Create New Account Form }}
+      <div class="col-md-6">
+        <h2 class="text-center form_header">Create an Account</h2>
+        <form class="form signup_form">
+          <div class="form-group mb-2 create_account_box">
+            <input
+              class="form-control"
+              type="text"
+              id="new_account_name"
+              placeholder="Enter Your Name"
+            />
+          </div>
+          {{! Email Field }}
+          <div class="form-group mb-2 create_account_box">
+            <input
+              class="form-control"
+              type="text"
+              id="username-signup"
+              placeholder="Enter Your Email"
+            />
+          </div>
+          {{! Password Field }}
+          <div class="form-group mb-2 create_account_box">
+            <input
+              class="form-control"
+              type="password"
+              id="password-signup"
+              placeholder="Enter A Password"
+            />
+          </div>
+          {{! Submit Button }}
+          <div class="form-group create_account_box">
+            <button class="btn btn-secondary" type="submit">Create Account</button>
+          </div>
+        </form>
+      </div>
+
     </div>
-
-    {{! Create New Account Form }}
-    <div class="col-md-6">
-      <h2 class="text-center form_header">Create an Account</h2>
-      <form class="form signup_form">
-        <div class="form-group mb-2 create_account_box">
-          <input
-            class="form-control"
-            type="text"
-            id="new_account_name"
-            placeholder="Enter Your Name"
-          />
-        </div>
-        {{! Email Field }}
-        <div class="form-group mb-2 create_account_box">
-          <input
-            class="form-control"
-            type="text"
-            id="username-signup"
-            placeholder="Enter Your Email"
-          />
-        </div>
-        {{! Password Field }}
-        <div class="form-group mb-2 create_account_box">
-          <input
-            class="form-control"
-            type="password"
-            id="password-signup"
-            placeholder="Enter A Password"
-          />
-        </div>
-        {{! Submit Button }}
-        <div class="form-group create_account_box">
-          <button class="btn btn-secondary" type="submit">Create Account</button>
-        </div>
-      </form>
-    </div>
-
   </div>
 </div>
 
-<script src="./js/login.js"></script>
+<!--script src="./js/login.js"></script-->
 <script src="./js/signup.js"></script>
