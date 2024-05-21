@@ -3,6 +3,7 @@ const User = require("./user");
 const RelaxDeepBreathTable = require("./Relax-deep-breath");
 const RelaxGuidedImagery = require("./RelaxGuidedImagery");
 const RelaxPRM = require("./Relax.PRM");
+const Benefit = require("./Benefits");
 
 User.hasMany(RelaxDeepBreathTable, {
   foreignKey: "user_id",
@@ -36,6 +37,7 @@ module.exports = {
   RelaxDeepBreathTable,
   RelaxGuidedImagery,
   RelaxPRM,
+  Benefit,
 };
 
 /*
