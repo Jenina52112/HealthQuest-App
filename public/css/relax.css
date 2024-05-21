@@ -97,6 +97,35 @@ footer {
 .account_forms {
   margin-top: 10%;
 }
+.navs {
+  margin-left: 0;
+  display: flex;
+  gap: 60%; 
+  padding-bottom: 30px;
+  max-width: 100vw;
+}
+
+
+.btn_new {
+  width: 100%; /* Ensures the button takes the full width of its container */
+  font-size: 1.5em; /* Ensures the font size of the button text is increased */
+}
+
+.new_breath, .breath-benefit {
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Adds transition effect */
+}
+
+.new_breath:hover, .breath-benefit:hover {
+  transform: scale(1.05); /* Slightly increases the size on hover */
+  background-color: #f0f0f0; /* Changes the background color on hover */
+}
+.card{
+  margin-top: 20%;
+}
+
+#cardid{
+  margin-top: 10px;
+}
 
 /* Media queries for responsiveness */
 
