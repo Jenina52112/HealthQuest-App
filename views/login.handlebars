@@ -1,7 +1,7 @@
 <script>
-  // Dynamically add the stylesheet link const link =
-  document.createElement('link'); link.rel = 'stylesheet'; link.href =
-  '/css/login.css'; document.head.appendChild(link);
+  // Dynamically add the stylesheet link const link = //
+  //document.createElement('link'); link.rel = 'stylesheet'; link.href = //
+  //'/css/login.css'; document.head.appendChild(link);
 </script>
 
 {{! Login and Create New Account Form }}
@@ -19,7 +19,7 @@
             <input
               class="form-control"
               type="text"
-              id="email_login"
+              id="user-login"
               placeholder="Email"
             />
           </div>
@@ -28,35 +28,7 @@
             <input
               class="form-control"
               type="text"
-              id="password_login"
-              placeholder="Password"
-            />
-          </div>
-          {{! Login Button }}
-          <div class="form-group">
-            <button class="btn btn-secondary">Login</button>
-          </div>
-        </form>
-      </div>
-      {{! Login Form }}
-      <div class="col-md-6">
-        <h2 class="text-center form_header">Login</h2>
-        <form class="form login_form">
-          {{! Email Field }}
-          <div class="form-group mb-2">
-            <input
-              class="form-control"
-              type="text"
-              id="email_login"
-              placeholder="Email"
-            />
-          </div>
-          {{! Password Field }}
-          <div class="form-group mb-2">
-            <input
-              class="form-control"
-              type="text"
-              id="password_login"
+              id="password-login"
               placeholder="Password"
             />
           </div>
@@ -108,5 +80,5 @@
   </div>
 </div>
 
-<!--script src="./js/login.js"></script-->
+<script src="./js/login.js"></script>
 <script src="./js/signup.js"></script>
