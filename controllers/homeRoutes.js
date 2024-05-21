@@ -73,16 +73,15 @@ router.get("/addBreath", withAuth, (req, res) => {
   res.render("addBreath", { logged_in: req.session.logged_in });
 });
 
-router.get('/benefits', async (req, res) => {
+router.get("/benefits", async (req, res) => {
   try {
     const benefitData = await Benefit.findAll();
     const benefits = benefitData.map((benefit) => benefit.get({ plain: true }));
-    res.render('benefits', { benefits, loggedIn: req.session.loggedIn });
+    res.render("benefits", { benefits, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
-
 });
 
 /*
