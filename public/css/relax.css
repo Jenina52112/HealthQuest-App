@@ -105,23 +105,31 @@ footer {
   max-width: 100vw;
 }
 
-
 .btn_new {
   width: 100%; /* Ensures the button takes the full width of its container */
   font-size: 1.5em; /* Ensures the font size of the button text is increased */
 }
 
-.new_breath {
-  color: var(--link_color);
+.btn_add_breath {
+  margin-left: 5px;
+}
+
+#new_breath_button, #breath_benefit_button {
+    color: var(--tertiary_color);
+}
+
+#new_breath_button:hover, #breath_benefit_button:hover {
+  color: var(--text_color);
 }
 
 .new_breath, .breath-benefit {
-  color: var(--link_color);
+  border-radius: 5px;
   font-size: 12px;
   transition: transform 0.3s ease, background-color 0.3s ease; /* Adds transition effect */
 }
 
 .new_breath:hover, .breath-benefit:hover {
+  color: var(--link_color);
   transform: scale(1.05); /* Slightly increases the size on hover */
   background-color: var(--tertiary_color); /* Changes the background color on hover */
 }
@@ -134,8 +142,18 @@ footer {
   margin-top: 10%;
 }
 
-/* Media queries for responsiveness */
+.breath_entry_form {
+  background-color: var(--background_color);
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.breath_entry_form h3, .add_breath_form  {
+  padding: 10px;
+}
+
+/* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
   /* Adjust styles for smaller screens */
   .breathin {
