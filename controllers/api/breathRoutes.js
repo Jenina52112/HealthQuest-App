@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { RelaxDeepBreathTable } = require("../../models");
 const withAuth = require("../../utils/auth");
 
+//add a new record to the Relax Deep Breath Table by pulling the request entries from the user
 router.post("/", withAuth, async (req, res) => {
   try {
     const breathData = await RelaxDeepBreathTable.create({
