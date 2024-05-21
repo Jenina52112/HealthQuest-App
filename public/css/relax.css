@@ -134,12 +134,12 @@ footer {
   background-color: var(--tertiary_color); /* Changes the background color on hover */
 }
 
-.card {
+#card {
   margin-top: 20%;
 }
 
 #cardid {
-  margin-top: 10%;
+  margin-top: 10px;
 }
 
 .breath_entry_form {
