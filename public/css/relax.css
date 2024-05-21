@@ -111,20 +111,27 @@ footer {
   font-size: 1.5em; /* Ensures the font size of the button text is increased */
 }
 
+.new_breath {
+  color: var(--link_color);
+}
+
 .new_breath, .breath-benefit {
+  color: var(--link_color);
+  font-size: 12px;
   transition: transform 0.3s ease, background-color 0.3s ease; /* Adds transition effect */
 }
 
 .new_breath:hover, .breath-benefit:hover {
   transform: scale(1.05); /* Slightly increases the size on hover */
-  background-color: #f0f0f0; /* Changes the background color on hover */
+  background-color: var(--tertiary_color); /* Changes the background color on hover */
 }
-.card{
+
+.card {
   margin-top: 20%;
 }
 
-#cardid{
-  margin-top: 10px;
+#cardid {
+  margin-top: 10%;
 }
 
 /* Media queries for responsiveness */
