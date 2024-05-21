@@ -27,7 +27,7 @@ const sess = {
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize,
-  }),ee
+  }),
 };
 
 app.use(homepageRoute);
