@@ -30,9 +30,9 @@ const sess = {
   }),
 };
 
-app.use(homepageRoute);
-
 app.use(session(sess));
+
+app.use(homepageRoute);
 
 // Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);
@@ -45,10 +45,16 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-// sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}!`);
+    console.log(`App listening on port ${PORT}`);
   });
+}).catch(error => {
+  console.error('Error syncing database:', error);
 });
-// set force to false
+
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
