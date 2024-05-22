@@ -4,6 +4,7 @@ const addBreathFormHandler = async (event) => {
   const breath_name = document.querySelector("#breath_name").value.trim();
   const content = document.querySelector("#content").value.trim();
 
+  //post the request data to api/breaths to add a new MySQL record
   if (breath_name && content) {
     const response = await fetch(`/api/breaths`, {
       method: "POST",

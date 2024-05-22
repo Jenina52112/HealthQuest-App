@@ -29,6 +29,8 @@ User.init(
       },
     },
   },
+
+  //setup the hooks to encrypt/decrypt passwords with a salt
   {
     hooks: {
       beforeCreate: async (newUserData) => {

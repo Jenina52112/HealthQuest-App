@@ -6,6 +6,7 @@ class RelaxDeepBreath extends Model {}
 // create fields/columns for Relax model
 RelaxDeepBreath.init(
   {
+    //primary key
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -13,6 +14,7 @@ RelaxDeepBreath.init(
       autoIncrement: true,
     },
 
+    //foreign key
     user_id: {
       type: DataTypes.INTEGER,
       references: {

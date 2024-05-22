@@ -5,12 +5,14 @@ class RelaxGuidedImagery extends Model {}
 
 RelaxGuidedImagery.init(
   {
+    //primary key
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
+    //foreign key
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -22,15 +24,6 @@ RelaxGuidedImagery.init(
     image_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
-      /*
-            references: {
-                model: 'image',
-                
-        },
-            key: 'id',
-            onDelete: 'CASCADE',
-            onUpdate: 'CASCADE',
-            */
     },
     created_at: {
       type: DataTypes.DATE,

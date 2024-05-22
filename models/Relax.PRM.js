@@ -5,12 +5,15 @@ class RelaxPRM extends Model {}
 
 RelaxPRM.init(
   {
+    //primary key
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
+
+    //foreign key
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
