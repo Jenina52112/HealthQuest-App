@@ -31,7 +31,6 @@ const sess = {
 };
 
 //app.use(homepageRoute);
-
 app.use(session(sess));
 
 // Inform Express.js on which template engine to use
